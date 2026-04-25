@@ -7,39 +7,104 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&q=80&w=2000');
+        /* Define the theme colors */
+        :root {
+            --gold: #D4AF37;
+        }
+        .accent-gold { color: var(--gold); }
+        .bg-gold { background-color: var(--gold); }
+        .border-gold { border-color: var(--gold); }
+
+        /* Slideshow Container */
+        .slideshow-container {
+            position: relative;
+            width: 100%;
+            height: 80vh; /* Matches the hero height from previous design */
+            overflow: hidden;
+        }
+
+        /* The slides themselves */
+        .mySlides {
+            display: none; /* Hidden by default */
+            position: absolute;
+            width: 100%;
+            height: 100%;
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
         }
-        .accent-gold { color: #D4AF37; }
-        .bg-gold { background-color: #D4AF37; }
-        .border-gold { border-color: #D4AF37; }
+
+        /* Overlay to ensure text is readable over images */
+        .mySlides::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+        }
+
+        /* Specific background images for the slides */
+        .slide1 { background-image: url('https://images.pexels.com/photos/5953535/pexels-photo-5953535.jpeg?auto=compress&cs=tinysrgb&w=1600'); }
+        .slide2 { background-image: url('https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=1600'); }
+        .slide3 { background-image: url('https://images.pexels.com/photos/10360066/pexels-photo-10360066.jpeg?auto=compress&cs=tinysrgb&w=1600'); }
+
+        /* Hero text content alignment */
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            z-index: 10;
+            width: 100%;
+            max-width: 64rem; /* max-w-4xl */
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        /* Simple Fading Animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+        @keyframes fade {
+            from {opacity: .4} 
+            to {opacity: 1}
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold tracking-tighter text-gray-900">DISH & <span class="accent-gold">DECOR</span></h1>
-            <a href="#contact" class="hidden md:block bg-gold text-white px-6 py-2 rounded-full font-bold hover:bg-yellow-700 transition">Book Now</a>
+            <h1 class="text-2xl font-bold tracking-tighter text-gray-900 uppercase">DISH & <span class="accent-gold">DECOR</span></h1>
+            <div class="flex items-center gap-4">
+                <span class="text-gray-500 text-sm hidden md:block"><i class="fas fa-map-marker-alt accent-gold mr-1"></i> Shop 6, Crosspoint Complex</span>
+                <a href="#contact" class="bg-gold text-white px-6 py-2 rounded-full font-bold hover:bg-yellow-700 transition">Book Now</a>
+            </div>
         </div>
     </nav>
 
-    <header class="hero-bg h-[80vh] flex items-center justify-center text-center text-white px-4">
-        <div class="max-w-3xl">
+    <header class="slideshow-container">
+        
+        <div class="mySlides slide1 fade"></div>
+        
+        <div class="mySlides slide2 fade"></div>
+        
+        <div class="mySlides slide3 fade"></div>
+
+        <div class="hero-content">
             <h1 class="text-5xl md:text-7xl font-extrabold mb-4 uppercase tracking-tight">Dish & Decor</h1>
             <p class="text-xl md:text-2xl mb-8 font-light italic text-gray-200">"Make Your Next Event Even More Amazing"</p>
             <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <a href="#collection" class="bg-gold hover:bg-yellow-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition">View Collection</a>
-                <a href="https://wa.me/260XXXXXXXXX" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition flex items-center justify-center">
-                    <i class="fab fa-whatsapp mr-2"></i> WhatsApp Us
+                <a href="#collection" class="bg-gold hover:bg-yellow-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition uppercase tracking-widest text-sm">View Collection</a>
+                <a href="https://wa.me/260XXXXXXXXX" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-10 rounded-full text-lg shadow-lg transition flex items-center justify-center uppercase tracking-widest text-sm">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i> WhatsApp Us
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="py-20 bg-white">
+    <section class="py-16 bg-white">
         <div class="container mx-auto px-4 grid md:grid-cols-4 gap-12 text-center">
             <div class="group">
                 <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-gold transition">
@@ -67,54 +132,55 @@
                     <i class="fas fa-heart text-2xl text-gold group-hover:text-white"></i>
                 </div>
                 <h3 class="font-bold text-xl mb-2">All Occasions</h3>
-                <p class="text-gray-500">Weddings, Kitchen Parties, & Funerals.</p>
+                <p class="text-gray-500">Weddings, Kitchen Parties, Funerals, & Corporate.</p>
             </div>
         </div>
     </section>
 
-  <section id="collection" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4">Our Chafing Dish Collection</h2>
-            <div class="w-24 h-1 bg-gold mx-auto"></div>
+    <section id="collection" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Chafing Dish Collection</h2>
+                <div class="w-24 h-1 bg-gold mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition">
+                    <img src="https://images.pexels.com/photos/5953535/pexels-photo-5953535.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rectangular Chafing Dish" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl mb-2">Rectangular Dish</h3>
+                        <p class="text-gray-500 mb-4">9L Capacity. Standard size, dual burner. Perfect for large mains and buffet staples.</p>
+                        <p class="text-gold font-bold text-xl font-mono">KXXX / Per Day</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition">
+                    <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Round Chafing Dish" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl mb-2">Round Roll-Top</h3>
+                        <p class="text-gray-500 mb-4">6L Capacity. Elegant design, smooth roll-top lid. Ideal for premium side dishes and stews.</p>
+                        <p class="text-gold font-bold text-xl font-mono">KXXX / Per Day</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition">
+                    <img src="https://images.pexels.com/photos/5953551/pexels-photo-5953551.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Soup Tureen" class="w-full h-64 object-cover">
+                    <div class="p-8">
+                        <h3 class="font-bold text-2xl mb-2">Soup Tureen</h3>
+                        <p class="text-gray-500 mb-4">10L Capacity. Keep soups, nshima, or sauce piping hot and accessible.</p>
+                        <p class="text-gold font-bold text-xl font-mono">KXXX / Per Day</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <div class="grid md:grid-cols-3 gap-10">
-            
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition">
-                <img src="https://images.pexels.com/photos/5953535/pexels-photo-5953535.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Rectangular Chafing Dish" class="w-full h-64 object-cover">
-                <div class="p-8">
-                    <h3 class="font-bold text-2xl mb-2">Rectangular Dish</h3>
-                    <p class="text-gray-500 mb-4">9L Capacity. Heavy-duty stainless steel. Perfect for large mains and buffet staples.</p>
-                    <p class="text-gold font-bold text-xl font-mono">K150 / Per Day</p>
-                </div>
-            </div>
+    </section>
 
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition">
-                <img src="https://images.pexels.com/photos/941861/pexels-photo-941861.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Round Chafing Dish" class="w-full h-64 object-cover">
-                <div class="p-8">
-                    <h3 class="font-bold text-2xl mb-2">Round Roll-Top</h3>
-                    <p class="text-gray-500 mb-4">6L Capacity. Elegant mirror finish. Ideal for premium side dishes and sauces.</p>
-                    <p class="text-gold font-bold text-xl font-mono">K130 / Per Day</p>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden transform hover:-translate-y-2 transition">
-                <img src="https://images.pexels.com/photos/5953551/pexels-photo-5953551.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Soup Tureen" class="w-full h-64 object-cover">
-                <div class="p-8">
-                    <h3 class="font-bold text-2xl mb-2">Soup Tureen</h3>
-                    <p class="text-gray-500 mb-4">10L Capacity. Keeps soups, nshima, or stews piping hot for hours.</p>
-                    <p class="text-gold font-bold text-xl font-mono">K120 / Per Day</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
     <section id="contact" class="py-24 bg-gray-900 text-white">
         <div class="container mx-auto px-4 grid md:grid-cols-2 gap-16">
             <div>
-                <h2 class="text-4xl font-bold mb-6">Visit Dish & Decor</h2>
-                <p class="text-gray-400 text-lg mb-8">We are located at the heart of Lusaka for easy pick-up and viewing.</p>
+                <h2 class="text-4xl font-bold mb-6 text-white uppercase">Visit <span class="accent-gold">Dish & Decor</span></h2>
+                <p class="text-gray-400 text-lg mb-8">Visit our showroom at Crosspoint Complex to view our polished equipment and discuss your event decor needs.</p>
                 <div class="space-y-6">
                     <div class="flex items-start">
                         <i class="fas fa-map-marker-alt text-gold mt-1 mr-4 text-xl"></i>
@@ -123,10 +189,6 @@
                     <div class="flex items-center">
                         <i class="fas fa-phone text-gold mr-4 text-xl"></i>
                         <p>+260 XX XXX XXXX</p>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-clock text-gold mr-4 text-xl"></i>
-                        <p>Mon - Sat: 08:00 - 17:00</p>
                     </div>
                 </div>
             </div>
@@ -138,8 +200,8 @@
                         <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:border-gold">
                     </div>
                     <input type="date" class="w-full p-3 border border-gray-200 rounded-lg mb-4 focus:outline-none focus:border-gold">
-                    <textarea rows="4" placeholder="How many dishes do you need?" class="w-full p-3 border border-gray-200 rounded-lg mb-6 focus:outline-none focus:border-gold"></textarea>
-                    <button class="w-full bg-gold text-white font-bold py-4 rounded-lg hover:bg-yellow-700 transition uppercase tracking-widest">Send Inquiry</button>
+                    <textarea rows="4" placeholder="Event details and equipment needed..." class="w-full p-3 border border-gray-200 rounded-lg mb-6 focus:outline-none focus:border-gold"></textarea>
+                    <button class="w-full bg-gold text-white font-bold py-4 rounded-lg hover:bg-yellow-700 transition uppercase tracking-widest">Send Enquiry</button>
                 </form>
             </div>
         </div>
@@ -147,12 +209,25 @@
 
     <footer class="py-10 bg-black text-center border-t border-gray-800">
         <h2 class="text-white font-bold mb-4 italic text-xl uppercase">Dish & Decor</h2>
-        <div class="flex justify-center space-x-6 mb-6 text-gray-400">
-            <a href="#" class="hover:text-gold"><i class="fab fa-facebook-f text-xl"></i></a>
-            <a href="#" class="hover:text-gold"><i class="fab fa-instagram text-xl"></i></a>
-        </div>
-        <p class="text-gray-600 text-sm tracking-widest">&copy; 2026 DISH & DECOR LUSAKA. ALL RIGHTS RESERVED.</p>
+        <p class="text-gray-600 text-sm tracking-widest uppercase">&copy; 2026 DISH & DECOR LUSAKA. ALL RIGHTS RESERVED.</p>
     </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            slides[slideIndex-1].style.display = "block";  
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
 
 </body>
 </html>
