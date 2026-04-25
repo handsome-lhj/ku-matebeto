@@ -3,112 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ku-Matebeto T-Bone HQ | The Art of Steak</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Chafing Dish Hire | Shop 6 Crosspoint Complex</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 font-sans">
 
-    <nav class="navbar">
-        <div class="logo">KU-MATEBETO <span>HQ</span></div>
-        <div class="nav-actions">
-            <a href="tel:+260978008297" class="btn btn-outline">CALL</a>
-            <a href="#book" class="btn btn-primary">BOOK A TABLE</a>
-        </div>
-    </nav>
-
-    <header class="hero">
-        <div class="hero-content">
-            <span class="hero-subtitle">ESTABLISHED 2018</span>
-            <h1>Savor the <span class="text-gold">Perfect</span> Cut.</h1>
-            <p>Experience Lusaka's most authentic T-Bone and Village Chicken, grilled over open flames.</p>
-            <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">EXPLORE MENU</a>
-                <a href="#find-us" class="btn btn-outline">OUR LOCATION</a>
-            </div>
+    <header class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
+        <div class="max-w-3xl">
+            <h1 class="text-5xl md:text-6xl font-bold mb-4">Hire Our Chafing Dishes & Make Your Next Event Amazing</h1>
+            <p class="text-xl mb-8">Premium catering equipment for weddings, corporate events, and parties in Lusaka.</p>
+            <a href="#contact" class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300">Book Now / Get a Quote</a>
         </div>
     </header>
 
-    <section class="social-proof">
-        <div class="proof-track">
-            <span>⭐ 500+ Happy Diners</span>
-            <span>🔥 Freshly Grilled Daily</span>
-            <span>🇿🇲 Authentic Zambian Flavors</span>
-            <span>🥩 Premium Aged T-Bone</span>
-        </div>
-    </section>
-
-    <section class="specials" id="specials">
-        <p class="section-tag">CHEF'S SELECTION</p>
-        <h2>Today's Masterpieces</h2>
-        <div class="grid-cards">
-            <div class="card">
-                <div class="card-img tbone-placeholder"></div>
-                <div class="card-body">
-                    <h3>Signature T-Bone</h3>
-                    <p>400g of prime beef, flame-kissed and served with chimichurri.</p>
-                    <span class="price">ZMW 350</span>
-                </div>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 grid md:grid-cols-4 gap-8 text-center">
+            <div>
+                <i class="fas fa-tags text-4xl text-yellow-600 mb-4"></i>
+                <h3 class="font-bold text-xl">Affordable Rates</h3>
+                <p class="text-gray-600">Competitive daily pricing for any budget.</p>
             </div>
-            <div class="card">
-                <div class="card-img chicken-placeholder"></div>
-                <div class="card-body">
-                    <h3>Village Chicken</h3>
-                    <p>Free-range chicken slow-cooked in traditional gravy.</p>
-                    <span class="price">ZMW 280</span>
-                </div>
+            <div>
+                <i class="fas fa-sparkles text-4xl text-yellow-600 mb-4"></i>
+                <h3 class="font-bold text-xl">Polished & Clean</h3>
+                <p class="text-gray-600">Equipment arrives mirror-clean and ready.</p>
+            </div>
+            <div>
+                <i class="fas fa-truck text-4xl text-yellow-600 mb-4"></i>
+                <h3 class="font-bold text-xl">Delivery Available</h3>
+                <p class="text-gray-600">Fast delivery within Lusaka and surroundings.</p>
+            </div>
+            <div>
+                <i class="fas fa-calendar-check text-4xl text-yellow-600 mb-4"></i>
+                <h3 class="font-bold text-xl">All Events</h3>
+                <p class="text-gray-600">Perfect for weddings to memorials.</p>
             </div>
         </div>
     </section>
 
-    <section class="menu" id="menu">
-        <h2>The Full Menu</h2>
-        <div class="tabs">
-            <button class="tab-btn active" onclick="openMenu(event, 'steaks')">STEAKS</button>
-            <button class="tab-btn" onclick="openMenu(event, 'chicken')">CHICKEN</button>
-            <button class="tab-btn" onclick="openMenu(event, 'drinks')">DRINKS</button>
-        </div>
-
-        <div id="steaks" class="tab-content active">
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h4>Classic T-Bone</h4>
-                    <p>Choice of Nshima or Hand-cut Chips</p>
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Collection</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500">[Image: Round Dish]</div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Round Chafing Dish</h3>
+                        <p class="text-sm text-gray-500 mb-4">6L Capacity - Ideal for sides & sauces</p>
+                        <p class="text-yellow-700 font-bold text-lg">Contact for Price</p>
+                    </div>
                 </div>
-                <div class="menu-price">350</div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500">[Image: Rectangular Dish]</div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Rectangular Dish</h3>
+                        <p class="text-sm text-gray-500 mb-4">9L Capacity - Best for main courses</p>
+                        <p class="text-yellow-700 font-bold text-lg">Contact for Price</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center text-gray-500">[Image: Soup Tureen]</div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl">Soup Tureen</h3>
+                        <p class="text-sm text-gray-500 mb-4">10L Capacity - Warm soups & broths</p>
+                        <p class="text-yellow-700 font-bold text-lg">Contact for Price</p>
+                    </div>
+                </div>
             </div>
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h4>Ribeye Steak</h4>
-                    <p>Garlic butter basted</p>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">How It Works</h2>
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0 text-center">
+                <div class="w-full">
+                    <span class="bg-yellow-600 text-white rounded-full h-12 w-12 inline-flex items-center justify-center mb-4 text-xl">1</span>
+                    <h4 class="font-bold">Browse</h4>
                 </div>
-                <div class="menu-price">450</div>
+                <div class="w-full">
+                    <span class="bg-yellow-600 text-white rounded-full h-12 w-12 inline-flex items-center justify-center mb-4 text-xl">2</span>
+                    <h4 class="font-bold">Contact</h4>
+                </div>
+                <div class="w-full">
+                    <span class="bg-yellow-600 text-white rounded-full h-12 w-12 inline-flex items-center justify-center mb-4 text-xl">3</span>
+                    <h4 class="font-bold">We Deliver</h4>
+                </div>
+                <div class="w-full">
+                    <span class="bg-yellow-600 text-white rounded-full h-12 w-12 inline-flex items-center justify-center mb-4 text-xl">4</span>
+                    <h4 class="font-bold">Enjoy</h4>
+                </div>
             </div>
         </div>
-        </section>
+    </section>
 
-    <section class="booking" id="book">
-        <div class="booking-container">
-            <h2>Reserve Your Seat</h2>
-            <form action="https://formspree.io/f/your-id" method="POST" class="book-form">
-                <input type="text" name="name" placeholder="Full Name" required>
-                <input type="tel" name="phone" placeholder="Phone Number" required>
-                <div class="form-row">
-                    <input type="date" name="date" required>
-                    <input type="number" name="guests" placeholder="Guests" min="1" required>
+    <section id="contact" class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4 grid md:grid-cols-2 gap-12">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Book Your Date</h2>
+                <p class="mb-4"><i class="fas fa-map-marker-alt text-yellow-500 mr-2"></i> Shop 6, Crosspoint Complex, Alick Nkhata Road, Lusaka</p>
+                <p class="mb-8 text-gray-400 font-bold">Quick Contact:</p>
+                <a href="https://wa.me/YOURNUMBERHERE" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg inline-flex items-center">
+                    <i class="fab fa-whatsapp mr-2 text-xl"></i> Chat on WhatsApp
+                </a>
+            </div>
+            <form class="bg-white p-8 rounded-lg text-gray-800">
+                <div class="mb-4">
+                    <label class="block font-bold mb-2">Name</label>
+                    <input type="text" class="w-full p-2 border rounded" placeholder="Your Name">
                 </div>
-                <button type="submit" class="btn btn-primary btn-full">CONFIRM RESERVATION</button>
+                <div class="mb-4">
+                    <label class="block font-bold mb-2">Event Date</label>
+                    <input type="date" class="w-full p-2 border rounded">
+                </div>
+                <div class="mb-4">
+                    <label class="block font-bold mb-2">Quantity Needed</label>
+                    <input type="number" class="w-full p-2 border rounded" placeholder="Total Dishes">
+                </div>
+                <button type="submit" class="w-full bg-yellow-600 text-white font-bold py-3 rounded hover:bg-yellow-700">Send Enquiry</button>
             </form>
         </div>
     </section>
 
-    <footer>
-        <p>Wamulwa Rd, Lusaka | @KuMatebetoHQ</p>
-        <p class="copyright">© 2026 KU-MATEBETO HQ</p>
+    <footer class="py-8 bg-black text-center text-gray-500 text-sm">
+        <p>&copy; 2024 Chafing Dish Hire Lusaka. All rights reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
