@@ -3,209 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ku-Matebeto T-Bone HQ</title>
+    <title>Ku-Matebeto T-Bone HQ | The Art of Steak</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;500;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="logo">Ku-Matebeto <span>HQ</span></div>
+        <div class="logo">KU-MATEBETO <span>HQ</span></div>
         <div class="nav-actions">
-            <a href="tel:+260978008297" class="btn btn-outline">Call Us</a>
-            <a href="#book" class="btn btn-primary">Book Table</a>
+            <a href="tel:+260978008297" class="btn btn-outline">CALL</a>
+            <a href="#book" class="btn btn-primary">BOOK A TABLE</a>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>The Best T-Bone in Town.</h1>
-            <p>Authentic flavors, premium cuts, and unforgettable dining experiences.</p>
+            <span class="hero-subtitle">ESTABLISHED 2018</span>
+            <h1>Savor the <span class="text-gold">Perfect</span> Cut.</h1>
+            <p>Experience Lusaka's most authentic T-Bone and Village Chicken, grilled over open flames.</p>
             <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">View Menu</a>
-                <a href="#find-us" class="btn btn-outline">Find Us</a>
+                <a href="#menu" class="btn btn-primary">EXPLORE MENU</a>
+                <a href="#find-us" class="btn btn-outline">OUR LOCATION</a>
             </div>
         </div>
     </header>
 
     <section class="social-proof">
-        <div class="proof-item">⭐⭐⭐⭐⭐ Top Rated</div>
-        <div class="proof-item">Signature T-Bone</div>
-        <div class="proof-item">Famous Village Chicken</div>
-        <div class="proof-item">Serving since 2018</div>
+        <div class="proof-track">
+            <span>⭐ 500+ Happy Diners</span>
+            <span>🔥 Freshly Grilled Daily</span>
+            <span>🇿🇲 Authentic Zambian Flavors</span>
+            <span>🥩 Premium Aged T-Bone</span>
+        </div>
     </section>
 
     <section class="specials" id="specials">
-        <h2>Today's Specials</h2>
+        <p class="section-tag">CHEF'S SELECTION</p>
+        <h2>Today's Masterpieces</h2>
         <div class="grid-cards">
             <div class="card">
-                <div class="card-img" style="background-image: url('images/tbone.jpg');"></div>
-                <h3>Signature T-Bone</h3>
-                <p>Perfectly grilled, juicy, and seasoned with our secret spices.</p>
-                <span class="price">ZMW 350</span>
+                <div class="card-img tbone-placeholder"></div>
+                <div class="card-body">
+                    <h3>Signature T-Bone</h3>
+                    <p>400g of prime beef, flame-kissed and served with chimichurri.</p>
+                    <span class="price">ZMW 350</span>
+                </div>
             </div>
             <div class="card">
-                <div class="card-img" style="background-image: url('images/chicken.jpg');"></div>
-                <h3>Village Chicken</h3>
-                <p>Traditional free-range chicken served with rich gravy and nshima.</p>
-                <span class="price">ZMW 280</span>
-            </div>
-            <div class="card">
-                <div class="card-img" style="background-color: #332623;"></div>
-                <h3>Premium Ribeye</h3>
-                <p>Thick-cut, marble-rich steak, cooked exactly to your liking.</p>
-                <span class="price">ZMW 450</span>
+                <div class="card-img chicken-placeholder"></div>
+                <div class="card-body">
+                    <h3>Village Chicken</h3>
+                    <p>Free-range chicken slow-cooked in traditional gravy.</p>
+                    <span class="price">ZMW 280</span>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="menu" id="menu">
-        <h2>Our Menu</h2>
+        <h2>The Full Menu</h2>
         <div class="tabs">
-            <button class="tab-btn active" onclick="openMenu(event, 'steaks')">Steaks</button>
-            <button class="tab-btn" onclick="openMenu(event, 'chicken')">Chicken</button>
-            <button class="tab-btn" onclick="openMenu(event, 'sides')">Sides</button>
-            <button class="tab-btn" onclick="openMenu(event, 'drinks')">Drinks</button>
+            <button class="tab-btn active" onclick="openMenu(event, 'steaks')">STEAKS</button>
+            <button class="tab-btn" onclick="openMenu(event, 'chicken')">CHICKEN</button>
+            <button class="tab-btn" onclick="openMenu(event, 'drinks')">DRINKS</button>
         </div>
 
         <div id="steaks" class="tab-content active">
             <div class="menu-item">
                 <div class="menu-info">
                     <h4>Classic T-Bone</h4>
-                    <p>Served with chips or nshima and vegetables.</p>
+                    <p>Choice of Nshima or Hand-cut Chips</p>
                 </div>
-                <div class="menu-price">ZMW 350</div>
+                <div class="menu-price">350</div>
             </div>
             <div class="menu-item">
                 <div class="menu-info">
                     <h4>Ribeye Steak</h4>
-                    <p>Served with your choice of side.</p>
+                    <p>Garlic butter basted</p>
                 </div>
-                <div class="menu-price">ZMW 450</div>
+                <div class="menu-price">450</div>
             </div>
         </div>
-
-        <div id="chicken" class="tab-content">
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h4>Village Chicken</h4>
-                    <p>Authentic traditional recipe.</p>
-                </div>
-                <div class="menu-price">ZMW 280</div>
-            </div>
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h4>Quarter Chicken</h4>
-                    <p>Flame-grilled with peri-peri or lemon herb.</p>
-                </div>
-                <div class="menu-price">ZMW 120</div>
-            </div>
-        </div>
-
-        <div id="sides" class="tab-content">
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h4>Nshima</h4>
-                    <p>Freshly cooked traditional staple.</p>
-                </div>
-                <div class="menu-price">ZMW 30</div>
-            </div>
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h4>Hand-cut Chips</h4>
-                    <p>Crispy golden potato fries.</p>
-                </div>
-                <div class="menu-price">ZMW 45</div>
-            </div>
-        </div>
-
-        <div id="drinks" class="tab-content">
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h4>Local Beers</h4>
-                    <p>Mosi, Castle, Black Label.</p>
-                </div>
-                <div class="menu-price">ZMW 35</div>
-            </div>
-            <div class="menu-item">
-                <div class="menu-info">
-                    <h4>Sodas & Water</h4>
-                    <p>Coca-Cola, Sprite, Fanta, Still/Sparkling Water.</p>
-                </div>
-                <div class="menu-price">ZMW 20</div>
-            </div>
-        </div>
-    </section>
-
-    <section class="find-us" id="find-us">
-        <h2>Find Us</h2>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <a href="tel:+260978008297" class="contact-card">
-                    <h4>📞 Call Us</h4>
-                    <p>+260 978 008 297</p>
-                </a>
-                <a href="https://wa.me/260978008297" target="_blank" class="contact-card whatsapp">
-                    <h4>💬 WhatsApp</h4>
-                    <p>Message us directly</p>
-                </a>
-                <div class="hours-card">
-                    <h4>Opening Hours</h4>
-                    <table>
-                        <tr><td>Mon - Thu</td><td>10:00 AM - 10:00 PM</td></tr>
-                        <tr><td>Fri - Sat</td><td>10:00 AM - Midnight</td></tr>
-                        <tr><td>Sunday</td><td>12:00 PM - 9:00 PM</td></tr>
-                    </table>
-                </div>
-            </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3846.123456789!2d28.283333!3d-15.416667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTXCsDI1JzAwLjAiUyAyOMKwMTcnMDAuMCJF!5e0!3m2!1sen!2szm!4v1611234567890!5m2!1sen!2szm" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
+        </section>
 
     <section class="booking" id="book">
-        <h2>Book a Table</h2>
-        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="book-form">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            <div class="form-group">
-                <label for="date">Date & Time</label>
-                <input type="datetime-local" id="date" name="date" required>
-            </div>
-            <div class="form-group">
-                <label for="guests">Number of Guests</label>
-                <input type="number" id="guests" name="guests" min="1" max="50" required>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full">Confirm Booking</button>
-        </form>
+        <div class="booking-container">
+            <h2>Reserve Your Seat</h2>
+            <form action="https://formspree.io/f/your-id" method="POST" class="book-form">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <div class="form-row">
+                    <input type="date" name="date" required>
+                    <input type="number" name="guests" placeholder="Guests" min="1" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">CONFIRM RESERVATION</button>
+            </form>
+        </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-logo">Ku-Matebeto <span>HQ</span></div>
-            <p>Wamulwa Rd, Lusaka, Zambia</p>
-            <div class="footer-links">
-                <a href="#specials">Specials</a>
-                <a href="#menu">Menu</a>
-                <a href="#find-us">Location</a>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2026 Ku-Matebeto T-Bone HQ. All rights reserved.
-        </div>
+        <p>Wamulwa Rd, Lusaka | @KuMatebetoHQ</p>
+        <p class="copyright">© 2026 KU-MATEBETO HQ</p>
     </footer>
-
-    <a href="https://wa.me/260978008297" class="floating-btn">Order on WhatsApp</a>
 
     <script src="script.js"></script>
 </body>
